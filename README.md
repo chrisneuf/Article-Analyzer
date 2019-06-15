@@ -11,9 +11,9 @@
 - compare fake news lingusitcs score to related articles 
 
 ## Run
-```
-python3 article_analyzer.py "url of article"
-```
+
+`python3 article_analyzer.py url`
+
 
 ## Todo
 
