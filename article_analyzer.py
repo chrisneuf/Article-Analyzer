@@ -9,10 +9,6 @@ import tldextract
 #Setup API Keys
 extraction_api = textapi.Client("a65d9a56", "1946036c4ab9e433a7f87a45405f6235")
 
-
-
-
-
 def main():
         
         url = firstarg=sys.argv[1]

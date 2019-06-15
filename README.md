@@ -13,6 +13,8 @@
 
 ## Todo
 
-- [ ] Submit an article and find similar articles
+- [] Submit an article and find similar articles
+    1. [x] Devlop method for finding similar articls
+    2. [ ] Refactor title for broader search (eg find key words, remove stop  words)
 - [ ] Compare the most similar articles by similar sentances
 
