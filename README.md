@@ -10,6 +10,11 @@
 - perform text analysis on the article to determine a score related to lingustics used in fake news articles
 - compare fake news lingusitcs score to related articles 
 
+## Run
+```
+python3 article_analyzer.py "url of article"
+```
+
 ## Todo
 
 - [ ] **Submit an article and find similar articles**
