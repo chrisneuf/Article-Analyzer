@@ -12,7 +12,7 @@
 
 ## Run
 
-`python3 article_analyzer.py url`
+`python3 article_analyzer.py {article url}`
 
 
 ## Todo
