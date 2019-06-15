@@ -12,9 +12,9 @@
 
 ## Todo
 
-- [ ] Submit an article and find similar articles
+### - [ ] Submit an article and find similar articles
     1. [x] Devlop method for finding similar articles
         - [ ] Remove certian words in query that influence results eg (numbers,   names?)
     2. [ ] Refactor title for broader search (eg find key words, remove stop  words)
-- [ ] Compare the most similar articles by similar sentances
+### - [ ] Compare the most similar articles by similar sentances
 
