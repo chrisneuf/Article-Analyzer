@@ -7,7 +7,7 @@
  articles 
 
 
-### Other Ideas
+#### Other Ideas
 - perform text analysis on the article to determine if the language
  is similar to the writing stlye of a Fake News article
 
