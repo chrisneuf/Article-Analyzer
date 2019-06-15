@@ -13,6 +13,6 @@
 
 ## Todo
 
-- [ ] Submit and article and find similar articles
+- [ ] Submit an article and find similar articles
 - [ ] Compare the most similar articles by similar sentances
 
