@@ -2,7 +2,6 @@
 from aylienapiclient import textapi
 from googlesearch import search
 import sys
-import textcleaner as tc
 import tldextract
 
 
