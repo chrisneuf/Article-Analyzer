@@ -1,6 +1,6 @@
 # Article-Analyzer
 
-## Idea
+## Main Idea
 
 - Article Analyzer is a service/website where a user can submit
  the url of a news article and receive comparisons to similar news 
@@ -8,7 +8,7 @@
 
 #### Other Ideas
 - perform text analysis on the article to determine a score related to lingustics used in fake news articles
-- comapre fake news lingusitcs score to related articles 
+- compare fake news lingusitcs score to related articles 
 
 ## Todo
 
