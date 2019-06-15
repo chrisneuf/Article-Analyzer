@@ -1,6 +1,7 @@
 
 from aylienapiclient import textapi
 from googlesearch import search
+from nltk.corpus import stopwords
 import sys
 import tldextract
 
@@ -14,14 +15,14 @@ def main():
         root = get_root(url)
         article = extraction_api.Extract({'url': url})
         title = article['title']
+        query = remove_stop_words(title)
 
-        
         print("\nFinding related articles for:\n")
         print(f"Title: {article['title']}")
         print(f"Source: {url}\n")
         
         # Find Related articles
-        related_articles = get_related_articles(title, root, 5)
+        related_articles = get_related_articles(query, root, 5)
 
         print("Related articles:\n")
         for article in related_articles:
@@ -36,6 +37,7 @@ def get_root(url):
       return ext[1]
 
 # Returns a list of  articles related to title less than max size
+# Exludes articles with the same domain name
 def get_related_articles(title, root, max):
 
         related_articles = []
@@ -46,10 +48,19 @@ def get_related_articles(title, root, max):
                         related_articles.append(article)
         return related_articles
 
+# Remove stop words from text
+# TODO: might have to edit stop word data for better results
+def remove_stop_words(text):
+        text = ' '.join([word for word in text.split() if word not in (stopwords.words('english'))])
+        return text
+
+#Compares 2 articles to find similarites and differences
+def compare_articles(article1, article2):
+        x = "void"
+
 if __name__ == "__main__":
         main() 
 
-#Compare Articles 
 
 
 
