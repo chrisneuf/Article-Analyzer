@@ -21,11 +21,18 @@ def main():
         title = article['title']
 
         
-        print("\nUrl article title")
-        print(f"{article['title']}\n")
+        print("\nFinding related articles for:\n")
+        print(f"Title: {article['title']}")
+        print(f"Source: {url}\n")
         
         # Find Related articles
         related_articles = get_related_articles(title, root, 5)
+
+        print("Related articles:\n")
+        for article in related_articles:
+                print(f"Title: {article['title']}")
+                print(f"Source: {article['url']}\n")
+                
 
 
 # Returns the root of url
@@ -40,9 +47,8 @@ def get_related_articles(title, root, max):
         for url in search(title, stop=max):
                 if root != get_root(url):
                         article = extraction_api.Extract({'url': url})
+                        article['url'] = url
                         related_articles.append(article)
-                        print(article['title'])
-                        print(f"{url}\n")
         return related_articles
 
 if __name__ == "__main__":
