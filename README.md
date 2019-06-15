@@ -6,10 +6,9 @@
  the url of a news article and receive comparisons to similar news 
  articles 
 
-
 #### Other Ideas
-- perform text analysis on the article to determine if the language
- is similar to the writing stlye of a Fake News article
+- perform text analysis on the article to determine a score related to lingustics used in fake news articles
+- comapre fake news lingusitcs score to related articles 
 
 ## Todo
 
