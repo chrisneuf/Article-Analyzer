@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 import sys
 import tldextract
 import config
+import exclusions
 
 
 #Setup API Keys
@@ -44,7 +45,8 @@ def get_related_articles(title, root, max):
 
         related_articles = []
         for url in search(title, stop=max):
-                if root != get_root(url):
+                url_root = get_root(url)
+                if root != url_root and url_root not in exclusions.domain_list :
                         try:
                                 article = extraction_api.Extract({'url': url})
                                 article['url'] = url
