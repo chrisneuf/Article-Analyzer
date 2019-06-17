@@ -5,10 +5,11 @@ from googlesearch import search
 from nltk.corpus import stopwords
 import sys
 import tldextract
+import config
 
 
 #Setup API Keys
-extraction_api = textapi.Client("a65d9a56", "1946036c4ab9e433a7f87a45405f6235")
+extraction_api = textapi.Client("a65d9a56", config.aylien_api_key)
 
 def main():
         
