@@ -1,5 +1,6 @@
 
 from aylienapiclient import textapi
+import aylienapiclient
 from googlesearch import search
 from nltk.corpus import stopwords
 import sys
@@ -19,11 +20,11 @@ def main():
 
         print("\nFinding related articles for:\n")
         print(f"Title: {article['title']}")
-        print(f"Source: {url}\n")
-        
+        print(f"Source: {url}")
+        print(f"Search query: {query}\n")
         # Find Related articles
         related_articles = get_related_articles(query, root, 5)
-
+        
         print("Related articles:\n")
         for article in related_articles:
                 print(f"Title: {article['title']}")
@@ -43,9 +44,15 @@ def get_related_articles(title, root, max):
         related_articles = []
         for url in search(title, stop=max):
                 if root != get_root(url):
-                        article = extraction_api.Extract({'url': url})
-                        article['url'] = url
-                        related_articles.append(article)
+                        try:
+                                article = extraction_api.Extract({'url': url})
+                                article['url'] = url
+                                related_articles.append(article)
+                        except aylienapiclient.errors.HttpError:
+                                print(f"Timed out on {url}\n")
+
+
+                                
         return related_articles
 
 # Remove stop words from text

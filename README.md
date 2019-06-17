@@ -25,3 +25,17 @@
         - [ ] find key words
 - [ ] **Compare the most similar articles by similar sentances**
 
+## Alogrithm
+
+### Current 
+
+- Pass an article URL into the python script
+- Extract article from website through Aylien API
+- Remove stop words from article Title
+- Use Title with stop words reomoved a google search qeury
+- Take top results and remove results with the same domain name 
+
+### TODO
+
+- Compare Articles some how (ML, text based comparison)
+
