@@ -27,7 +27,7 @@
 
 ## Alogrithm
 
-### Current 
+### Current State
 
 - Pass an article URL into the python script
 - Extract article from website through Aylien API
@@ -35,7 +35,5 @@
 - Use Title with stop words reomoved a google search qeury
 - Take top results and remove results with the same domain name 
 
-### TODO
 
-- Compare Articles some how (ML, text based comparison)
 
