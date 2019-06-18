@@ -7,6 +7,7 @@ import sys
 import tldextract
 import config
 import exclusions
+import article_comparer as ac
 
 
 #Setup API Keys
@@ -18,6 +19,8 @@ def main():
         root = get_root(url)
         article = extraction_api.Extract({'url': url})
         title = article['title']
+        print(article)
+        data = article['article'].split('.')
         query = remove_stop_words(title)
 
         print("\nFinding related articles for:\n")
@@ -31,7 +34,8 @@ def main():
         for article in related_articles:
                 print(f"Title: {article['title']}")
                 print(f"Source: {article['url']}\n")
-                
+              
+        ac.compare_sentance_to_article(data[5], related_articles[0]['article'],5)
 
 
 # Returns the root of url
