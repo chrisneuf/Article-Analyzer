@@ -12,6 +12,10 @@
 
 ## Run
 
+### Start Bert-as-a-serivce
+`bert-serving-start -num_worker=1 -model_dir=uncased_L-12_H-768_A-12`
+
+### Run algorithm 
 `python3 article_analyzer.py {article url}`
 
 ## Alogrithm
